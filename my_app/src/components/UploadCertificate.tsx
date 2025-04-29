@@ -30,6 +30,12 @@ const UploadCertificate: React.FC = () => {
       setFiles((prev) => [...prev, ...validFiles]);
       console.log("Files uploaded:", validFiles);
     }
+    const filterDuplicates = (newFiles: File[]) => {
+      return newFiles.filter(
+        (file) => !files.some((f) => f.name === file.name && f.size === file.size)
+      );
+    };
+    
   };
 
   const handleDrop = (e: DragEvent<HTMLDivElement>) => {
@@ -41,6 +47,11 @@ const UploadCertificate: React.FC = () => {
       setFiles((prev) => [...prev, ...validFiles]);
       console.log("Files dropped:", validFiles);
     }
+    const filterDuplicates = (newFiles: File[]) => {
+      return newFiles.filter(
+        (file) => !files.some((f) => f.name === file.name && f.size === file.size)
+      );
+    }; 
   };
 
   const handleSubmit = (e: FormEvent) => {
