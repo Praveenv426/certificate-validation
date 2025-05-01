@@ -1,0 +1,62 @@
+# --- Python/Django ---
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+db.sqlite3
+*.sqlite3
+*.log
+
+# Django Migrations (ignore all except __init__.py)
+**/migrations/
+!**/migrations/__init__.py
+
+# Django media/uploads
+/media/
+staticfiles/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# Secrets
+.env
+.env.*
+
+# --- Node/React ---
+node_modules/
+build/
+dist/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv (React side)
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+# React coverage/test
+coverage/
+*.lcov
+
+# --- System/Editor files ---
+.DS_Store
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# --- Compiled ---
+*.out
+*.class
+
+# --- Backup ---
+*.bak
+*.swp
+*~

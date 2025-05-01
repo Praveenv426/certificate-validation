@@ -25,13 +25,21 @@ SECRET_KEY = "django-insecure-toko7v4==p*glii+e5!_^w)+v856^3w7mwtb032)b5&j(po&sa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "5173"]
+
+CORS_ALLOWED_ORIGINS = [ 
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
+    "http://localhost:5173",
+]
+CORS_ALLOW_CREDENTIALS = True
 
 
 # Application definition
 
 INSTALLED_APPS = [
     "django.contrib.admin",
+    "corsheaders",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -52,6 +60,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",  # Add this line
 ]
 
 ROOT_URLCONF = "cert_backend.urls"

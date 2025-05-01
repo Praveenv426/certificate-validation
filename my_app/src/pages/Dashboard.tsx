@@ -1,12 +1,12 @@
-import UploadCertificate from "./UploadCertificate";
-import CertificateList from "./CertificateList";
+import UploadCertificate from "../components/UploadCertificate";
+import CertificateList from "../components/CertificateList";
 
-const Dashboard: React.FC = () => {
+const Dashboard = () => {
   return (
     <div className="p-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Certificate Dashboard</h1>
-        <div className="text-sm">Sunday, April 20, 2025</div>
+        <div className="text-sm">{new Date().toDateString()}</div>
       </div>
       <div className="flex flex-col lg:flex-row gap-6">
         <div className="lg:w-1/3">
